@@ -1,9 +1,9 @@
-package br.com.mariojp.game.model;
+package br.com.mariojp.game;
 
 public class Missil extends Sprite{
 
 	
-	private final int MISSILE_SPEED = 5;
+	private final int MISSILE_SPEED = 2;
 	private int alcance;
 	
 	public Missil(int x, int y,int alcance) {
@@ -12,7 +12,7 @@ public class Missil extends Sprite{
 	    initMissil();
 	}
 	private void initMissil() { 
-		carregarImagem("/imagens/missil.png");
+		carregarImagem("/imagens/missil.png"); 
 		getImageDimensions();
 	 }
 	

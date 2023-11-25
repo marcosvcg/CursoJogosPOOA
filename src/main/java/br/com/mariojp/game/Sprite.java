@@ -1,4 +1,4 @@
-package br.com.mariojp.game.model;
+package br.com.mariojp.game;
 
 import java.awt.Image;
 import java.awt.Rectangle;

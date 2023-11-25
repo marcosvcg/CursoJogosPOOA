@@ -1,7 +1,5 @@
 package br.com.mariojp.game;
 
-import br.com.mariojp.game.main.Jogo;
-
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -22,7 +20,7 @@ public class Principal extends JFrame {
         add(new Jogo());
         setResizable(false);
         pack();
-        setTitle("Bolsonaro 2022");
+        setTitle("Game");    
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);        
     }
