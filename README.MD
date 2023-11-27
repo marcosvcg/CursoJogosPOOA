@@ -1,48 +1,49 @@
-# Proposta: refatorar o jogo aplicando o padrão State para criar fases.
+# Trabalho AVII
 
-## Como nós aplicamos o padrão State:
+## Proposta: refatorar o jogo aplicando o padrão State para criar fases.
+
+### Como nós aplicamos o padrão State:
 
 ```java
 public interface JogoState {
-
-	void inicializar(Jogo jogo);
+    void inicializar(Jogo jogo);
     void atualizar();
     void desenhar(Graphics g);
     void passarProximaFase();
 }
 ```
 
-- Com essa interface, conseguimos controlar o estado do jogo nas classes "Fase":
+- Com essa interface, conseguimos controlar o estado do jogo utilizando as classes "Fase" (que estão implementadas no código):
 
 ```java
 public class Fase implements JogoState {
 
-	private Jogo jogo;
-	private final int numeroDaFase = 5;
+   private Jogo jogo;
+   private final int numeroDaFase = 5;
 	
-	@Override
-	public void inicializar(Jogo jogo) {
-		// TODO Auto-generated method stub
-		...
-	}
+   @Override
+   public void inicializar(Jogo jogo) {
+	// TODO Auto-generated method stub
+	...
+   }
 	
-	@Override
-	public void atualizar() {
-		// TODO Auto-generated method stub
-		...
-	}
+   @Override
+   public void atualizar() {
+	// TODO Auto-generated method stub
+	...
+   }
 	
-	@Override
-	public void desenhar(Graphics g) {
-		// TODO Auto-generated method stub
-		...
-	}
+   @Override
+   public void desenhar(Graphics g) {
+	// TODO Auto-generated method stub
+	...
+   }
 	
-	@Override
-	public void passarProximaFase() {
-		// TODO Auto-generated method stub
-		...
-	}
+   @Override
+   public void passarProximaFase() {
+	// TODO Auto-generated method stub
+	...
+   }
 }
 ```
 
