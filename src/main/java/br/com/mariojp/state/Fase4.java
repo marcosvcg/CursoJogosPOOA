@@ -42,7 +42,8 @@ public class Fase4 implements JogoState {
 					alien.setVisible(false);
 					jogo.score++;
 					if(jogo.score > numeroDaFase*5) {
-						jogo.endgame = true;	
+						jogo.score = 0;
+						passarProximaFase();		
 					}
 				}
 			}
@@ -70,9 +71,9 @@ public class Fase4 implements JogoState {
 		g.drawString("FASE : " + numeroDaFase, 90, 15);
 	}
 
-//	private void passarProximaFase() {
-//		jogo.nextStage = true;
-//		jogo.nextStageScreenTimer = 60;
-//		jogo.setState(new Fase5());
-//	}
+	public void passarProximaFase() {
+		jogo.nextStage = true;
+		jogo.nextStageScreenTimer = 60;
+		jogo.setState(new Fase5());
+	}
 }

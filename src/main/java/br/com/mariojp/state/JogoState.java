@@ -9,4 +9,5 @@ public interface JogoState {
 	void inicializar(Jogo jogo);
     void atualizar();
     void desenhar(Graphics g);
+    void passarProximaFase();
 }

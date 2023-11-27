@@ -71,7 +71,7 @@ public class Fase3 implements JogoState {
 		g.drawString("FASE : " + numeroDaFase, 90, 15);
 	}
 
-	private void passarProximaFase() {
+	public void passarProximaFase() {
 		jogo.nextStage = true;
 		jogo.nextStageScreenTimer = 60;
 		jogo.setState(new Fase4());

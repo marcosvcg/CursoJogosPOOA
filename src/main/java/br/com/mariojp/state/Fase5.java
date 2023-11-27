@@ -9,11 +9,11 @@ import br.com.mariojp.game.Inimigo;
 import br.com.mariojp.game.Jogo;
 import br.com.mariojp.game.Missil;
 
-public class Fase1 implements JogoState {
+public class Fase5 implements JogoState {
 
 	private Jogo jogo;
-	private final int numeroDaFase = 1;
-
+	private final int numeroDaFase = 5;
+	
 	@Override
 	public void inicializar(Jogo jogo) {
 		// TODO Auto-generated method stub
@@ -43,7 +43,7 @@ public class Fase1 implements JogoState {
 					jogo.score++;
 					if(jogo.score > numeroDaFase*5) {
 						jogo.score = 0;
-						passarProximaFase();	
+						passarProximaFase();
 					}
 				}
 			}
@@ -72,8 +72,6 @@ public class Fase1 implements JogoState {
 	}
 
 	public void passarProximaFase() {
-		jogo.nextStage = true;
-		jogo.nextStageScreenTimer = 60;
-		jogo.setState(new Fase2());
+		jogo.endgame = true;
 	}
 }
