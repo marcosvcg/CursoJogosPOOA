@@ -1,36 +1,48 @@
-# CURSO DE JOGOS
+# Proposta: refatorar o jogo aplicando o padrão State para criar fases.
 
-http://mariojp.com.br
+## Como nós aplicamos o padrão State:
 
-Mario Jorge Pereira
+```java
+public interface JogoState {
 
-### Projetos e código relacionado ao curso sobre jogos em java.
+	void inicializar(Jogo jogo);
+    void atualizar();
+    void desenhar(Graphics g);
+    void passarProximaFase();
+}
+```
 
-- Basico 1:
-Criando um aplicativo com uma tela em Java Swing
+- Com essa interface, conseguimos controlar o estado do jogo nas classes "Fase":
 
-- Basico 2:
-Desenhado e exibindo o desenho na tela.
+```java
+public class Fase implements JogoState {
 
-- Basico 3:
-Carregando e exibindo uma imagem na tela.
+	private Jogo jogo;
+	private final int numeroDaFase = 5;
+	
+	@Override
+	public void inicializar(Jogo jogo) {
+		// TODO Auto-generated method stub
+		...
+	}
+	
+	@Override
+	public void atualizar() {
+		// TODO Auto-generated method stub
+		...
+	}
+	
+	@Override
+	public void desenhar(Graphics g) {
+		// TODO Auto-generated method stub
+		...
+	}
+	
+	@Override
+	public void passarProximaFase() {
+		// TODO Auto-generated method stub
+		...
+	}
+}
+```
 
-- Animação 1:
-Fazendo a animação utilizando <code>javax.swing.Timer</code> e
-<code>java.awt.event.ActionListener</code>
-
-- Animação 2:
-Fazendo a animação utilizando <code>java.util.Timer</code> e
-<code>java.util.TimerTask</code>
-
-- Animação 3:
-Fazendo a animação utilizando <code>Thread</code>.
-
-- Sprites 1:
-Colocando a nave e os movimentos.
-
-- Sprites 2:
-Disparando mísseis com a nave. 
-
-- Sprites 3:
-Detectando colisão entre os mísseis e os inimigos.
